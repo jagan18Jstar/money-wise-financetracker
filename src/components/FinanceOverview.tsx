@@ -106,7 +106,7 @@ const FinanceOverview = () => {
 
     if (projection < 0) {
       setBudgetWarning(
-        `Warning: At your current spending rate, you may run short by $${Math.abs(projection).toFixed(2)} by month's end!`
+        `Warning: At your current spending rate, you may run short by Rs ${Math.abs(projection).toFixed(2)} by month's end!`
       );
     } else {
       setBudgetWarning(null);
@@ -130,7 +130,7 @@ const FinanceOverview = () => {
           </CardHeader>
           <CardContent>
             <div className="text-3xl font-bold text-success">
-              ${balance.toFixed(2)}
+              Rs {balance.toFixed(2)}
             </div>
             <p className="text-xs text-muted-foreground mt-1">
               Current available balance
@@ -145,7 +145,7 @@ const FinanceOverview = () => {
           </CardHeader>
           <CardContent>
             <div className="text-3xl font-bold text-primary">
-              ${totalIncome.toFixed(2)}
+              Rs {totalIncome.toFixed(2)}
             </div>
             <p className="text-xs text-muted-foreground mt-1">
               All time earnings
@@ -160,7 +160,7 @@ const FinanceOverview = () => {
           </CardHeader>
           <CardContent>
             <div className="text-3xl font-bold text-destructive">
-              ${totalExpense.toFixed(2)}
+              Rs {totalExpense.toFixed(2)}
             </div>
             <p className="text-xs text-muted-foreground mt-1">
               All time spending
