@@ -89,8 +89,7 @@ const TransactionList = () => {
                     variant={transaction.type === "income" ? "default" : "destructive"}
                     className="font-semibold"
                   >
-                    {transaction.type === "income" ? "+" : "-"}$
-                    {transaction.amount.toFixed(2)}
+                    {transaction.type === "income" ? "+" : "-"}Rs {transaction.amount.toFixed(2)}
                   </Badge>
                 </div>
               ))}
