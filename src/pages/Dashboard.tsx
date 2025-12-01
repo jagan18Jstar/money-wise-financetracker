@@ -11,6 +11,7 @@ import TransactionList from "@/components/TransactionList";
 import TodoList from "@/components/TodoList";
 import EventsList from "@/components/EventsList";
 import ExpenseChart from "@/components/ExpenseChart";
+import BudgetSetter from "@/components/BudgetSetter";
 
 const Dashboard = () => {
   const [user, setUser] = useState<User | null>(null);
@@ -92,10 +93,13 @@ const Dashboard = () => {
         {/* Finance Overview */}
         <FinanceOverview />
 
-        {/* Add Transaction */}
-        <div className="glass-card p-6 rounded-2xl animate-fade-in">
-          <h2 className="text-xl font-bold mb-4">Add Transaction</h2>
-          <TransactionForm />
+        {/* Budget and Transaction */}
+        <div className="grid lg:grid-cols-2 gap-6">
+          <BudgetSetter />
+          <div className="glass-card p-6 rounded-2xl animate-fade-in">
+            <h2 className="text-xl font-bold mb-4">Add Transaction</h2>
+            <TransactionForm />
+          </div>
         </div>
 
         {/* Charts and Stats */}
